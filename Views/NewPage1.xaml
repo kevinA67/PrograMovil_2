@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimerProyectoMovil2.Views.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout>
+
+        <Image Source="{Binding Persona.Foto}" HeightRequest="200" WidthRequest="200" Margin="20, 0, 20, 0" BackgroundColor="Azure" 
+               HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Button Text="Tomar imagen" x:Name="btnFoto" Clicked="btnFoto_Clicked"/>
+
+        <Label Text="Nombres" Margin="20,0,20,0" VerticalOptions="Start" HorizontalOptions="Start"/>
+        <Entry Text="{Binding Persona.Nombres}" MaxLength="100" Margin="20,0,20,0" x:Name="Nombres"/>
+
+        <Label Text="Apellidos" Margin="20,0,20,0" VerticalOptions="Start" HorizontalOptions="Start"/>
+        <Entry Text="{Binding Persona.Apellidos}" MaxLength="100" Margin="20,0,20,0" x:Name="Apellidos" />
+
+        <Label Text="Fecha de Nacimiento" Margin="20,0,20,0"  VerticalOptions="Start" HorizontalOptions="Start"/>
+        <DatePicker Date="{Binding Persona.FechaNac}" Margin="20,0,20,0" x:Name="FechaNac" />
+
+        <Label Text="Telefono" Margin="20,0,20,0" VerticalOptions="Start" HorizontalOptions="Start"/>
+        <Entry Text="{Binding Persona.Telefono}"  Margin="20,0,20,0" x:Name="Telefono" />
+
+        <Label Text="Foto" Margin="20,0,20,0" VerticalOptions="Start" HorizontalOptions="Start"/>
+        <Entry Text="{Binding Persona.Foto}" Margin="20,0,20,0" x:Name="Foto" />
+
+        <Image Source="{Binding Persona.Foto}" HeightRequest="200" WidthRequest="200"  Margin="20,0,20,0" />
+
+        <Button x:Name="btnAceptar" VerticalOptions="Center"  HorizontalOptions="Center" Text="Aceptar" BackgroundColor="BlueViolet" TextColor="White" Clicked="btnAceptar_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
